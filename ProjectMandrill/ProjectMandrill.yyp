@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "1321eaa2-c45b-46f2-b6fa-02dee5fa9248",
+            "Value": {
+                "id": "6d00c50b-9fc4-44ed-a5a2-b29cdfd256ac",
+                "resourcePath": "rooms\\engine_room\\engine_room.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "1aa7d36b-5cc3-49c5-b854-968e1da66603",
             "Value": {
                 "id": "3c1374b7-1991-40fb-9f1f-463779b42e56",
@@ -52,6 +60,14 @@
                 "id": "5ddabe1b-435d-48a7-91fe-6fb623cceaeb",
                 "resourcePath": "views\\27b56270-9219-4bf3-9834-1e399a1123c6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "339bb54f-555e-4ea9-a1bd-791e67ede0ab",
+            "Value": {
+                "id": "e83672bf-ec88-485b-bbdc-02f40b886351",
+                "resourcePath": "tilesets\\tiles_Collision\\tiles_Collision.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -138,7 +154,7 @@
             "Key": "93511f24-6141-467c-87b1-feb671f84681",
             "Value": {
                 "id": "3727739d-ddfd-49b1-a585-3a8216af1e7f",
-                "resourcePath": "sprites\\sprite1\\sprite1.yy",
+                "resourcePath": "sprites\\prj_Mandrill\\prj_Mandrill.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -180,6 +196,14 @@
                 "id": "b5f5213e-bf5f-48aa-99c4-a5c76aee1283",
                 "resourcePath": "views\\a7e5a1d7-ff4a-4471-b3ef-46aaaafef20c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b622a66e-9175-4260-80da-69f77f38c64b",
+            "Value": {
+                "id": "252c42c3-7860-468b-8476-640913de9eec",
+                "resourcePath": "sprites\\spr_Collision\\spr_Collision.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
