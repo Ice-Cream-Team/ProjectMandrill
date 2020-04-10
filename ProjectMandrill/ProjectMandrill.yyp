@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "32e41b93-98e5-470c-aa34-5e4a794f4374",
+            "Value": {
+                "id": "b7ed15f9-6fc2-4b02-8092-c28b34e514b3",
+                "resourcePath": "tilesets\\tileset2\\tileset2.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "339bb54f-555e-4ea9-a1bd-791e67ede0ab",
             "Value": {
                 "id": "e83672bf-ec88-485b-bbdc-02f40b886351",
@@ -92,14 +100,6 @@
                 "id": "a4d89491-2554-48c6-a8f3-f6a27b8e0628",
                 "resourcePath": "views\\3e8e9ac4-d532-42ae-b9c7-13d9437c70ac.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "41902de6-6b3b-48ba-8d6d-f2278d582bd8",
-            "Value": {
-                "id": "44c332db-c684-4615-a3c1-c6991c3dabd1",
-                "resourcePath": "sprites\\spr_TestTiles\\spr_TestTiles.yy",
-                "resourceType": "GMSprite"
             }
         },
         {
@@ -148,14 +148,6 @@
                 "id": "b674b1d3-bcc1-439b-aafd-c56db92af02c",
                 "resourcePath": "views\\7e30b1af-42a2-469b-bd52-f3243f588c64.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "8c89c1d5-16cf-45a5-a568-f59fb5109d37",
-            "Value": {
-                "id": "dc34eba3-8107-4a24-be54-8ff0c3636db9",
-                "resourcePath": "tilesets\\tiles_TestTiles\\tiles_TestTiles.yy",
-                "resourceType": "GMTileSet"
             }
         },
         {
@@ -244,6 +236,14 @@
                 "id": "d95e1ed4-595b-4fdd-805f-2553ab1c55ac",
                 "resourcePath": "views\\ceae9efc-bc5b-4418-a895-cc52f6200027.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "d69ff7a5-a0b1-47cd-9693-f82db46e2907",
+            "Value": {
+                "id": "fa794ee7-552a-48eb-8ad5-94fed12abb11",
+                "resourcePath": "sprites\\sprite5\\sprite5.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
