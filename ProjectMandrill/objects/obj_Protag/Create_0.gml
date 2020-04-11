@@ -1,12 +1,19 @@
-// Create event is triggered when the game starts, when the object gets made in the room for the first time
+/// @description Create event is triggered when the game starts, when the object gets made in the room for the first time
 
-horizontalSpeed = 0; //hspeed is built in
-verticalSpeed = 0; //vspeed is built in
-grav = 0.7; //"gravity" is a built in var so must use grav
-max_drop = 4; // max vertical drop speed.
-playerSpeed = 4; //speed is built in
-jumpHeight = -16;
-
+// Constant variables (can't be constants but unchanging)
 tilemap = layer_tilemap_get_id("layer_Collision");
 tile_width = tilemap_get_tile_width(tilemap);
 tile_height = tilemap_get_tile_height(tilemap);
+
+// Changing variables
+grav = 0.4
+sp = 4
+jmp = -8
+max_drop = 8
+hsp = 0; // Integer horizontal speed
+vsp = 0; // Integer vertical speed
+hsp_fract = 0; // Fractional speed
+vsp_fract = 0; // Fractional speed
+mv_down = true;
+mv_right = true;
+

@@ -34,7 +34,7 @@
             "Key": "1321eaa2-c45b-46f2-b6fa-02dee5fa9248",
             "Value": {
                 "id": "6d00c50b-9fc4-44ed-a5a2-b29cdfd256ac",
-                "resourcePath": "rooms\\engine_room\\engine_room.yy",
+                "resourcePath": "rooms\\room_Engine\\room_Engine.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -42,7 +42,7 @@
             "Key": "1aa7d36b-5cc3-49c5-b854-968e1da66603",
             "Value": {
                 "id": "3c1374b7-1991-40fb-9f1f-463779b42e56",
-                "resourcePath": "sprites\\rock\\rock.yy",
+                "resourcePath": "sprites\\spr_Rock\\spr_Rock.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -66,7 +66,7 @@
             "Key": "32e41b93-98e5-470c-aa34-5e4a794f4374",
             "Value": {
                 "id": "b7ed15f9-6fc2-4b02-8092-c28b34e514b3",
-                "resourcePath": "tilesets\\tileset2\\tileset2.yy",
+                "resourcePath": "tilesets\\tiles_Collision2\\tiles_Collision2.yy",
                 "resourceType": "GMTileSet"
             }
         },
@@ -162,7 +162,7 @@
             "Key": "93511f24-6141-467c-87b1-feb671f84681",
             "Value": {
                 "id": "3727739d-ddfd-49b1-a585-3a8216af1e7f",
-                "resourcePath": "sprites\\prj_Mandrill\\prj_Mandrill.yy",
+                "resourcePath": "sprites\\spr_Mandrill\\spr_Mandrill.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -194,7 +194,7 @@
             "Key": "a7c570e6-a238-474f-b302-082ddfcda6ce",
             "Value": {
                 "id": "162646c5-310d-4e03-943c-28223ce6b96c",
-                "resourcePath": "rooms\\room0\\room0.yy",
+                "resourcePath": "rooms\\room_Mandrill\\room_Mandrill.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -242,7 +242,7 @@
             "Key": "d69ff7a5-a0b1-47cd-9693-f82db46e2907",
             "Value": {
                 "id": "fa794ee7-552a-48eb-8ad5-94fed12abb11",
-                "resourcePath": "sprites\\sprite5\\sprite5.yy",
+                "resourcePath": "sprites\\spr_Collision2\\spr_Collision2.yy",
                 "resourceType": "GMSprite"
             }
         },

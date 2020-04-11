@@ -1,6 +1,6 @@
 
 {
-    "name": "room0",
+    "name": "room_Mandrill",
     "id": "a7c570e6-a238-474f-b302-082ddfcda6ce",
     "creationCodeFile": "",
     "inheritCode": false,
