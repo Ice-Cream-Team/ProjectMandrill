@@ -12,7 +12,7 @@ space_key = keyboard_check_pressed(vk_space); //jmping motion
 
 // Wen we are moving right it will be 1, when left it will be -1
 hsp = (right_key - left_key) * sp;
-vsp = min(vsp + grav, max_drop);
+vsp = min(vsp + grav, fall);
 mv_right = hsp > 0;
 mv_down = vsp > 0;
 
@@ -58,26 +58,57 @@ if (place_meeting(x, y + vsp, obj_Collision))
 
 #endregion
 
-#region // 4.) Tile-based collision
+#region // 4.) Tile-based Sonic-retro detection. http://info.sonicretro.org/SPG:Solid_Tiles
+#macro TILE_DETECTION_SENSOR_TOTAL 4
+
+// A, B, C, D
+/*{
+	enum dtypes { down, up, left, right };
+	var bvsp = max(1, abs(vsp));
+	var bhsp = max(1, abs(hsp));
+	var speeds  = [vsp,              vsp];
+	var directs = [dtypes.down,      dtypes.down];
+	var xchecks = [bbox_right,       bbox_left];
+	var ychecks = [bbox_bottom+bvsp, bbox_bottom+bvsp];
+	
+	for (var each_sensor = 0; each_sensor < TILE_DETECTION_SENSOR_TOTAL; each_sensor++)
+	{
+		var direct_check = (directs[each_sensor] == dtypes.down and mv_down == true) or
+		                   (directs[each_sensor] == dtypes.up and mv_down == false) or
+						   (directs[each_sensor] == dtypes.right and mv_right == true) or
+						   (directs[each_sensor] == dtypes.left and mv_right == false);
+		
+		if (direct_check == false)
+			continue;
+			
+		var tile_detected = tilemap_get_at_pixel(tilemap, xchecks[each_sensor], ychecks[each_sensor]);
+		
+		if (tile_detected == 0)
+			continue;
+			
+		if 
+	}
+}*/
+
 // Tile-based horizontal collision.
 {
 	var bbox_side;	
-	var collision;
+	var tile_detected;
 	var chsp;
 
 	// Get x values of boundary side in direction of movement.
 	bbox_side = mv_right ? bbox_right : bbox_left;
 	
-	// Bound the horizontal speed so such that we always check for collision.
+	// Bound the horizontal speed such that we always check for a tile.
 	chsp = (mv_right ? max(hsp, 1) : min(hsp, -1));
 	
-	// Determine the collision at three points.
-	collision = (tilemap_get_at_pixel(tilemap, bbox_side + chsp, y) != 0) ||
-	            (tilemap_get_at_pixel(tilemap, bbox_side + chsp, bbox_top) != 0) ||
-				(tilemap_get_at_pixel(tilemap, bbox_side + chsp, bbox_bottom) != 0);
+	// Determine the tile detection at three points.
+	tile_detected = (tilemap_get_at_pixel(tilemap, bbox_side + chsp, y) != 0) ||
+	                (tilemap_get_at_pixel(tilemap, bbox_side + chsp, bbox_top) != 0) ||
+				    (tilemap_get_at_pixel(tilemap, bbox_side + chsp, bbox_bottom) != 0);
 	
 	// Perform collision operations.
-	if (collision)
+	if (tile_detected)
 	{
 		var correction
 		
@@ -92,22 +123,21 @@ if (place_meeting(x, y + vsp, obj_Collision))
 // Tile-based vertical collision.
 {
 	var bbox_side;	
-	var collision;
+	var tile_detected;
 	var cvsp;
 
 	// Get y values of boundary side in direction of movement.
 	bbox_side = mv_down ? bbox_bottom : bbox_top;
 	
-	// Bound the vertical speed so such that we always check for collision.
+	// Bound the vertical speed so such that we always check for tile detection.
 	cvsp = (mv_down ? max(vsp, 1) : min(vsp, -1));
 	
-	// Determine the collision at three points.
-	collision = (tilemap_get_at_pixel(tilemap, x, bbox_side + cvsp) != 0) ||
-	            (tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + cvsp) != 0) ||
-				(tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + cvsp) != 0);
+	// Determine the tile detection at two points.
+	tile_detected = (tilemap_get_at_pixel(tilemap, bbox_left, bbox_side + cvsp) != 0) ||
+				    (tilemap_get_at_pixel(tilemap, bbox_right, bbox_side + cvsp) != 0);
 	
-	// Perform collision operations.
-	if (collision)
+	// Perform the tile detection operations.
+	if (tile_detected)
 	{
 		var correction
 		
